@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Menu</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: Arial; /*A google font is to be used*/
+			}
+			body{
+				background-color: darkred;
+			}
+			/*For 700px wide screens and above*/
+			@media only screen and (min-width: 700px){
+				nav{
+	display: flex;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	background: linear-gradient(darkred, red);
+	align-items: center;
+	box-shadow: 2px 2px 40px 12px grey;
+	z-index: 10;
+	font-weight: bold;
+}
+nav ul{
+	margin-left: auto;
+	margin-right: 20px;
+}
+nav ul li{
+	display: inline-block;
+	margin-left: 5px;
+
+}
+.logo{
+	margin-left: 20px;
+}
+nav ul li a{
+	color: white;
+	font-size: 1.2rem;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	text-decoration: none;
+	transition: 0.2s ease;
+}
+nav ul li a:hover{
+	color: #fdff37;
+	text-shadow: 1px 1px 1px black;
+
+}
+nav ul li.active a{
+	color: #fdff37;
+	text-shadow: 1px 1px 1px black;
+}
+.toggle-btn{
+		display: none;	
+	}
+.cross{
+	display: none;
+}
+main{
+	margin-top: 130px;
+	position: absolute;
+	width: 100%;
+}
+main .heading{
+	text-align: center;
+	font-family: "Lucida Calligraphy"; /*A google font is to be used*/
+}
+.heading{
+	text-shadow: 5px 3px 3px darkgrey;
+	font-size: 3rem;
+	color: white;
+}
+.categories-1st-row, .categories-2nd-row{
+	display: flex;
+	justify-content: space-around;
+	margin: 10px;
+	margin-top: 20px;
+}
+.categories-1st-row > div, .categories-2nd-row > div{
+	width: 30%;
+	height: 350px;
+	transition: 0.4s ease;
+	border-radius: 5px;
+}
+.categories-1st-row a, .categories-2nd-row a{
+	text-decoration: none;
+	text-align: center;
+	position: relative;
+	top: 300px;
+	color: white;
+	width: 100%;
+}
+.categories-1st-row h2, .categories-2nd-row h2{
+	background-color: rgba(0,0,0,0.5);
+	padding: 12px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.lunch{
+	background: url("menu.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.curry{
+	background: url("specials.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.supper{
+	background: url("supper.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;	
+}
+.dinner{
+	background: url("dinner.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.desserts{
+	background: url("desserts.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.soup{
+	background: url("soup.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.categories-1st-row h2:hover, .categories-2nd-row h2:hover{
+	background: linear-gradient(darkred, yellow);
+}
+.categories-1st-row div:hover, .categories-2nd-row div:hover{
+	box-shadow: 2px 10px 22px 15px grey;
+}
+.footer{
+	height: auto;
+	background : linear-gradient(#232020, #302b2b);
+	padding: 20px 0px 20px 0px;
+	width: 100%;
+	margin-top: 980px;
+	position: absolute;
+	
+}
+.footer table {
+	width: 100%;
+	height: 100%;
+}
+.footer table tr td{
+	text-align: left;
+}
+.footer table tr td a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	display: block;
+	margin-top: 10px;
+}
+.footer table tr td a:hover{
+	color: gold;
+	text-decoration: underline;
+
+}
+.copyright p{
+	color : #fff;
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 20px;
+
+}
+  }
+@media only screen and (max-width: 699.9px){
+
+	nav{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	width: 280px;
+	position: fixed;
+	background: linear-gradient(darkred,  red);
+	align-items: center;
+	margin-left: -320px;
+	transition: 0.4s ease;
+	box-shadow: 2px 2px 40px 8px grey;
+	}
+	.logo{
+		margin-top: 30px;
+	}
+	nav ul {
+		list-style-type: none; 
+	}
+	nav ul li{
+		margin-top: 30px;
+	}
+	nav ul li a{
+		display: block;
+		padding: 10px 100px;
+		border-bottom: 1px solid gold;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+	}
+	nav ul li a:hover{
+	color: #fdff37;
+	text-shadow: 1px 1px 1px black;
+	}
+	.toggle-btn{
+		position: absolute;
+		margin-left: 20px;
+		margin-top: 20px;
+
+	}
+	.header{
+		height: 100px;
+		width: 100%;
+		position: fixed;
+		background: linear-gradient(darkred, red);
+		align-items: center;
+		z-index: 10;
+	}
+.active_nav{
+	margin-left: 0px;
+}
+img[src="cross.png"]{
+	margin-top: 30px;
+}
+img[src="cross.png"]:hover, .toggle-btn:hover{
+	cursor: pointer;
+}
+main{
+	margin-top: 140px;
+	position: absolute;
+	width: 100%;
+}
+.categories-1st-row, .categories-2nd-row{
+	display: block;
+	justify-content: space-around;
+	margin: 10px;
+	margin-top: 20px;
+}
+.categories-1st-row > div, .categories-2nd-row > div{
+	width: 100%;
+	height: 350px;
+	transition: 0.4s ease;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.categories-1st-row a, .categories-2nd-row a{
+	text-decoration: none;
+	text-align: center;
+	position: relative;
+	top: 300px;
+	color: white;
+	width: 100%;
+}
+.categories-1st-row h2, .categories-2nd-row h2{
+	background-color: rgba(0,0,0,0.5);
+	padding: 12px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.lunch{
+	background: url("menu.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.curry{
+	background: url("specials.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.supper{
+	background: url("supper.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;	
+}
+.dinner{
+	background: url("dinner.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.desserts{
+	background: url("desserts.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.soup{
+	background: url("soup.jpg"), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	background-position: center;
+	background-size: cover;
+}
+.categories-1st-row h2:hover, .categories-2nd-row h2:hover{
+	background: linear-gradient(darkred, yellow);
+}
+.categories-1st-row div:hover, .categories-2nd-row div:hover{
+	box-shadow: 2px 10px 22px 15px grey;
+}
+.footer{
+	height: auto;
+	background : linear-gradient(#232020, #302b2b);
+	padding: 20px 0px 20px 0px;
+	width: 100%;
+	margin-top: 2505px;
+	position: absolute;
+	
+}
+.heading{
+	font-family: Lucida Calligraphy;
+	text-shadow: 5px 3px 3px darkgrey;
+	color: white;
+	text-align: center;
+}
+.footer table {
+	width: 100%;
+	height: 100%;
+}
+.footer table tr td{
+	text-align: left;
+}
+.footer table tr td a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	display: block;
+	margin-top: 10px;
+}
+.footer table tr td a:hover{
+	color: gold;
+	text-decoration: underline;
+
+}
+.copyright p{
+	color : #fff;
+	text-align: left;
+	margin-left: 20px;
+	margin-top: 20px;
+
+}
+}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="toggle-btn">
+				<img src="hamburger.png" height="60" />
+			</div>
+			
+			<nav>
+				<div class="logo">
+					<img src="logo.png" height="75"/>
+				</div>
+				
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li class="active"><a href="menu.html">MENU</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<center>
+					<img class="cross" src="cross.png" height="50" />
+					</center>
+					
+				</ul>
+			</nav>
+		</div>
+
+			<main>
+				<h1 class="heading">Menu Categories</h1>
+
+				<div class="categories-1st-row">
+					<div class="lunch">
+						<a href="#"><h2>LUNCH</h2></a>
+					</div>
+
+				    <div class="supper">
+						<a href="#"><h2>SUPPER</h2></a>
+					</div>
+
+					<div class="dinner">
+						<a href="#"><h2>DINNER</h2></a>
+					</div>
+
+				</div>
+
+				<div class="categories-2nd-row">
+					<div class="curry">
+						<a href="#"><h2>CURRY</h2></a>
+					</div>
+
+				    <div class="desserts">
+						<a href="#"><h2>DESSERTS</h2></a>
+					</div>
+
+					<div class="soup">
+						<a href="#"><h2>SOUP</h2></a>
+					</div>
+				</div>
+
+			</main>
+		<div class="footer">
+			<table>
+				<tr>
+					<td><a href="#">FAQ</a></td>
+					<td><a href="#">Call Us</a></td>
+					<td><a href="#">Customers</a></td>
+				</tr>
+				
+				
+				<tr>
+					<td><a href="#">Reviews</a></td>
+					<td><a href="#">Food Fairs</a></td>
+					<td><a href="#">Programs</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">Jobs</a></td>
+					<td><a href="#">Suggest a food</a></td>
+					<td><a href="#">Gallery</a></td>
+				</tr>
+			</table>
+			<div class="copyright">
+				<p>&copy; 2019, The Abar Khabo Restaurant</p>
+			</div>
+		</div>
+	</body>
+	<script src="jquery-3.4.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.toggle-btn').on('click', function(){
+				$('nav').addClass('active_nav');
+				
+			})
+			$('.cross').on('click', function(){
+					$('nav').removeClass('active_nav');
+			})
+		})
+	</script>
+</html>

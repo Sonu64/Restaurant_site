@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<link href="https://fonts.googleapis.com/css?family=Farro&display=swap" rel="stylesheet">
+		<title>Sonu's Food Plaza</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="toggle-btn">
+				<img src="hamburger.png" height="60" />
+			</div>
+			
+			<nav>
+				<div class="logo">
+					<img src="logo.png" height="75"/>
+				</div>
+				
+				<ul>
+					<li class="active"><a href="#">HOME</a></li>
+					<li><a href="menu.html">MENU</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<center>
+					<img class="cross" src="cross.png" height="50" />
+					</center>
+					
+				</ul>
+			</nav>
+		</div>
+		<div class="jumbotron">
+			<!--JUST THE IMAGE-->
+		</div>
+		<div class="mid">
+			
+			<div class="menu">
+				<a href="menu.html">
+					<h2>MENU</h2>
+				</a>
+			</div>
+			
+			
+			<div class="specials">
+				<a href="#">
+					<h2>SPECIALS</h2>
+				</a>
+			</div>
+			<div class="map">
+				<a href="#">
+					<h2>MAP</h2>
+				</a>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<table>
+				<tr>
+					<td><a href="#">FAQ</a></td>
+					<td><a href="#">Call Us</a></td>
+					<td><a href="#">Customers</a></td>
+				</tr>
+				
+				
+				<tr>
+					<td><a href="#">Reviews</a></td>
+					<td><a href="#">Food Fairs</a></td>
+					<td><a href="#">Programs</a></td>
+				</tr>
+				<tr>
+					<td><a href="#">Jobs</a></td>
+					<td><a href="#">Suggest a food</a></td>
+					<td><a href="#">Gallery</a></td>
+				</tr>
+			</table>
+			<div class="copyright">
+				<p>&copy; 2019, The Abar Khabo Restaurant</p>
+			</div>
+		</div>
+	</body>
+	<script src="jquery-3.4.0.min.js"></script>
+	<script>
+		$(document).ready ( function() {
+			$('.toggle-btn').on('click', function(){
+				$('nav').addClass('active_nav');
+				
+			})
+			$('.cross').on('click', function(){
+					$('nav').removeClass('active_nav');
+			})
+		})
+	</script>
+</html>
